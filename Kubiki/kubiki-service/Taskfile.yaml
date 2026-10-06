@@ -1,0 +1,17 @@
+version: "3"
+
+tasks:
+  zapusk:
+    aliases: [run, start]
+    desc: "Запуск сервиса бросков кубиков"
+    deps:
+      - task: moduli
+    cmds:
+      - go run ./cmd --config=./config/local.yaml
+
+  moduli:
+    desc: "Загрузка go модулей"
+    sources:
+      - go.mod
+    cmds:
+      - go mod download

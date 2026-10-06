@@ -1,0 +1,8 @@
+env: "local"
+
+grpc:
+  port: 50002
+  timeout: 30s
+
+storage:
+  dsn: "host=localhost port=5432 user=nri password=nri_parol dbname=nri sslmode=disable"
